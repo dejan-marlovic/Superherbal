@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="wraper" class="centered" style ="width:1024px;">
+      <div id="header">
+    	<img id="header_logo" src="images/superlogo.png" />
+  	<!--
+    <ul id="nav">
+  		<li><a id="button_about_us" class="button" href="about_us.html" target="main_window">Pocetna</a></li>
+  		<li><a id="button_contact" class="button" href="contact.html" target="main_window">Kontakt</a></li>
+  		<li><a id="button_find_us" class="button" href="find_us.html" target="main_window">Nadjite nas</a></li>
+  		<li>
+  			<a class="button" href="products.html" target="main_window">Nasa ponuda</a>
+  			<ul>
+  				<li><a id="button_products_stevia" href="stevia.html" target="main_window">Stevia</a></li>
+  				<li><a id="button_products_goji" href="goji.html" target="main_window">Goji</a></li>
+  				<li><a id="button_products_aronija" href="aronija.html" target="main_window">Aronija</a></li>
+  			</ul>
+  		</li>
+  	</ul>
+  -->
+      </div>
+      <div id="content">
+  	<!--
+  <iframe  src="about_us.html" name="main_window" id="main_window" scrolling="no">
+  </iframe>
+  -->
+        <div id="content_box">
+          <div class="header"><h3 class="editable" id="about_us_header">O nama</h3></div>
+          <div class="body">
+            <img id="portreit" class="editable" src="images/Dejan_Marlovic.png" />
+            <div style="width:450px; margin:10px;">
+              <p style="font-weight:bold;font-size:14px;font-family:Segoe Script;">Dobrodosli!</p> 
+              <p style="font-family:Segoe Script;">
+              Mi smo poduzece koje se bavi  uzgojom i prodajom biljaka. U nasim staklenicima
+              uzgajamo izmedju ostalog: stiviju aroniju i goji sjemenke.
+              Nasi uzgoji su  potpuno prirodni i ekoloski uzgajani
+              bez ikakvih dodatnih kemiklija. Kontaktirate nas direktno i narucite neke  od nasih proizvoda.
+              <br />
+              </p>
+              <p style="font-family:Segoe Script;">Elvedin Medosevic</p>
+            </div>
+            <div class="footer"></div>
+          </div>      
+        </div>
+        <div id="content_box">
+          <div class="header"><h3 class="editable" id="about_us_header">Nasi proizvodi</h3></div>
+          <img id="left_arrow_green" class="editable" src="images/arrow_green.png" />
+          <img id="right_arrow_green" class="editable" src="images/arrow_green.png" />
+            <div class="product_box">
+              <div class="product_description" id="stevia_description">
+                <p><a href="" target="blank">Stevia</a></p>
+                <p>Opis produkta, 
+                   Opis produkta, 
+                   Opis produkta,
+                   Opis produkta,
+                   Opis produkta,
+                   Opis produkta
+                </p>
+                <p>Cjena: 40kr/kg</p>
+              </div>
+              <img class="product_image" class="editable" src="images/stevia.jpg" />
+            </div>
+            <div class="product_box">
+              <div class="product_description" id="goji_description">
+                <p><a href="" target="blank">Goji</a></p>
+                <p>Opis produkta, 
+                   Opis produkta, 
+                   Opis produkta,
+                   Opis produkta,
+                   Opis produkta,
+                   Opis produkta
+                </p>
+                <p>Cjena: 40kr/kg</p>
+              </div>
+              <img class="product_image" class="editable" src="images/goji.jpg" />
+          </div>
+          <div class="product_box">
+            <div class="product_description" id="aronija_description">
+              <p><a href="" target="blank">Aronija</a></p>
+              <p>Opis produkta, 
+                 Opis produkta, 
+                 Opis produkta,
+                 Opis produkta,
+                 Opis produkta,
+                 Opis produkta
+                </p>
+                <p>Cjena: 40kr/kg</p>
+            </div>
+            <img class="product_image" class="editable" src="images/aronija.jpg" />
+          </div>
+          <div class="footer"></div>
+        </div>
+      </div>	
+      <div id="footer">
+        <div class="footer_box" style="left:20px;">
+          <table id="contact_info">
+            <tr>
+              <th>Adresa:</th>
+              <th>Telefon:</th>
+              <th>E-mail:</th>
+            </tr>
+            <tr>
+              <td>Ludagatan 11</td>
+              <td>0123 4567</td>
+              <td>info@superherbal.com</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>elve@superherbal.com</td>
+            </tr>
+          </table>
+        </div>
+        <div class="footer_box" style="left:430px;">
+          <p style="width:110px; margin-bottom:6px;">Socialni mediji:</p>
+          <img class="social_logo" src="images/twitter.png" />
+          <img class="social_logo" src="images/facebook.png" />
+          <img class="social_logo" src="images/gplus.png" />
+        </div>
+        <div class="footer_box" style="right:20px; height:410px;">
+          <p style="width:150px;">Kontaktirajte nas:</p>
+          <form action="http://www.appfoundry.se/superherbal/mailserver.php" id="contact_form" method="POST">
+            <label for="email_input">Vasa mejl adresa:</label>
+            <br />
+            <input id="email_input" type="email" name="email" required />
+            <br />
+            <br />
+            <label for="message_area">Vasa poruka:</label>
+            <br />
+            <textarea name="message" id="message_area" maxlength="1024"></textarea>
+            <br />
+            <input type="submit" value="posalji" id="send" />
+          </form>
+        </div>
+        <div class="footer_box" style="top:150px;left:20px;">
+          <p style="width:150px;">Nadjite nas:</p>
+          <p id="find_us_description" style="font-weight:normal; width:516px;">Mi se nalazimo kod bakine ulice tamo gdje je memetov rastoran:</p>
+          <iframe id="map" scrolling="no" src="https://maps.google.se/maps?q=google+maps+lundagatan+11&amp;ie=UTF8&amp;hq=&amp;hnear=Lundagatan+11,+171+63+Solna&amp;gl=se&amp;t=m&amp;z=14&amp;ll=59.353993,18.001813&amp;output=embed"></iframe><br /><small><a href="https://maps.google.se/maps?q=google+maps+lundagatan+11&amp;ie=UTF8&amp;hq=&amp;hnear=Lundagatan+11,+171+63+Solna&amp;gl=se&amp;t=m&amp;z=14&amp;ll=59.353993,18.001813&amp;source=embed" style="color:#0000FF;text-align:left;">View Larger Map</a></small>
+        </div>
+      </div>
+    </div>
+    <script type="application/dart" src="index.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+    <script type="application/dart" src="find_us.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+name: Superherbal
+author: Dejan Marlovic
+homepage: http://www.appfoundry.se
+description: web application
+dependencies:
+  browser: any
