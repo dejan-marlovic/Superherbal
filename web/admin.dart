@@ -1,6 +1,5 @@
 library admin;
 import "dart:html";
-import "Input.dart";
 import "TextArea.dart";
 
 class admin
@@ -15,30 +14,25 @@ class admin
         Rectangle rect = e.getBoundingClientRect();
         double elemRight = rect.left + rect.width - parentRect.left;
         ButtonElement editButton = new ButtonElement();
-        editButton.innerHtml = "edit";
-        editButton.style.position = "absolute";
-        editButton.style.top = (rect.top - parentRect.top - 5).toString() + "px";
-        editButton.style.left = (elemRight - 60).toString() + "px";  
+        editButton.innerHtml = "..";
+        editButton.style.top = (rect.top - parentRect.top).toString() + "px";
+        editButton.style.left = (elemRight - 10).toString() + "px";  
+        editButton.id="edit_button";
         editButton.onClick.listen((_) => CreatePropertyWindow(e, filename));
-        editButton.style.zIndex = "99";
         e.parent.children.add(editButton);
         String elemValue = "";
-        switch (e.nodeName)
+        
+        if (e is SpanElement)
         {
-          case "P":
-            elemValue = (e as ParagraphElement).innerHtml;
-            break;
-            
-          case "H3":
-            elemValue = (e as HeadingElement).innerHtml;
-            break;
-            
-          case "IMG":
-            elemValue = (e as ImageElement).src;
-            break;
-          
-          default:
-            break;
+          elemValue = e.innerHtml;
+        }
+        else if (e is ImageElement)
+        {
+          elemValue = e.src;
+        }  
+        else if (e is AnchorElement)
+        {
+          elemValue = e.href;
         }
         if (elemValue != "") _jsonValues.putIfAbsent(e.id, () => elemValue);
       }
@@ -58,7 +52,7 @@ class admin
   static void CreatePropertyWindow(Element e, String filename)
   {
     FormElement form = new FormElement();
-    form.action = "http://www.appfoundry.se/superherbal/fileserver.php"; 
+    form.action = "http://85.229.11.226/superherbal/contentparser.php"; 
     form.method = "POST";
     SubmitButtonInputElement buttonSave = new SubmitButtonInputElement();
     ButtonElement buttonClose = new ButtonElement();
@@ -73,33 +67,46 @@ class admin
     });
     
     Element elem;
-    
-    switch(e.nodeName)
+    if (e is SpanElement)
     {
-      case "H3":
-        InputField headingInputField = new InputField();
-        headingInputField.elem.value = (e as HeadingElement).innerHtml;
-        elem = headingInputField.elem;
-        break;
-      case "P":
-        TextArea textArea = new TextArea(25,60);
-        textArea.element.value = (e as ParagraphElement).innerHtml;
-        elem = textArea.element;
-        break;      
+     TextArea textArea = new TextArea(5,60);
+     textArea.element.value = e.innerHtml;
+     elem = textArea.element;
+    }
+    else if (e is ImageElement)
+    {
+      TextArea textArea = new TextArea(5,60);
+      textArea.element.value = e.src;
+      elem = textArea.element;
+    }  
+    else if (e is AnchorElement)
+    {
+      TextArea textArea = new TextArea(5,60);
+      textArea.element.value = e.href;
+      elem = textArea.element;
+    }
+    
+    /*
+    switch(e.nodeName)
+    {      
       case "IMG":
         InputField inputField = new InputField();
         inputField.elem.value = (e as ImageElement).src;
         elem = inputField.elem;
         break;       
+      case "A":
+        InputField linkInputField = new InputField();
+        linkInputField.elem.value = (e as AnchorElement).href;
+        elem = linkInputField.elem;;
+        break;
       default:
         break;
     }
-    
+    */
     if (elem != null)
     {
       form.children.add(elem);
       if (elem is TextAreaElement) (elem as TextAreaElement).name = e.id;
-      else if (elem is InputElement) (elem as InputElement).name = e.id;
     } 
     HiddenInputElement filenameInput = new HiddenInputElement();
     filenameInput.value = filename;

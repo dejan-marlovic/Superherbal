@@ -30,68 +30,73 @@
   </iframe>
   -->
         <div id="content_box">
-          <div class="header"><h3 class="editable" id="about_us_header">O nama</h3></div>
-          <div class="body">
-            <img id="portreit" class="editable" src="images/Dejan_Marlovic.png" />
-            <div style="width:450px; margin:10px;">
-              <p style="font-weight:bold;font-size:14px;font-family:Segoe Script;">Dobrodosli!</p> 
-              <p style="font-family:Segoe Script;">
+          <div class="header"><h3><span class="editable" id="about_us_header">O nama</span></h3></div>
+            <img id="portrait" class="editable" src="images/Dejan_Marlovic.png" />
+            <div style="width:450px; margin:10px; position:relative;">
+              <p style="font-weight:bold;font-size:14px;font-family:Segoe Script;"><span id="welcome" class="editable">Dobrodosli!</span></p>
+              <p  style="font-family:Segoe Script;">
+              <span id="welcome_description" class="editable"> 
               Mi smo poduzece koje se bavi  uzgojom i prodajom biljaka. U nasim staklenicima
               uzgajamo izmedju ostalog: stiviju aroniju i goji sjemenke.
               Nasi uzgoji su  potpuno prirodni i ekoloski uzgajani
               bez ikakvih dodatnih kemiklija. Kontaktirate nas direktno i narucite neke  od nasih proizvoda.
-              <br />
-              </p>
-              <p style="font-family:Segoe Script;">Elvedin Medosevic</p>
+              </span></p>
+              <p style="font-family:Segoe Script;"><span id="signature" class="editable">Elvedin Medosevic</span></p>
             </div>
-            <div class="footer"></div>
-          </div>      
+            <div class="footer"></div>     
         </div>
-        <div id="content_box">
-          <div class="header"><h3 class="editable" id="about_us_header">Nasi proizvodi</h3></div>
-          <img id="left_arrow_green" class="editable" src="images/arrow_green.png" />
-          <img id="right_arrow_green" class="editable" src="images/arrow_green.png" />
-            <div class="product_box">
-              <div class="product_description" id="stevia_description">
-                <p><a href="" target="blank">Stevia</a></p>
-                <p>Opis produkta, 
+        <div id="content_box" style="height:500px;">
+          <div class="header"><h3><span class="editable" id="our_products_header">Nasi proizvodi</span></h3></div>
+          <img id="left_arrow_green" src="images/arrow_green.png" />
+          <img id="right_arrow_green" src="images/arrow_green.png" />
+            <div class="slide">
+              <div class="product_description">
+                <p><a href="http://sv.wikipedia.org/wiki/S%C3%B6tflockelsl%C3%A4ktet" target="" id="stevia_link" class="editable">Stevia</a></p>
+                <p>
+                <span id="stevia_description" class="editable">
+                   Opis produkta, 
                    Opis produkta, 
                    Opis produkta,
                    Opis produkta,
                    Opis produkta,
                    Opis produkta
+                 </span>
                 </p>
-                <p>Cjena: 40kr/kg</p>
+               <span class="editable" id="stevia_price">Cjena: 40kr/kg</span>
               </div>
-              <img class="product_image" class="editable" src="images/stevia.jpg" />
+              <img class="product_image editable" src="images/stevia.jpg" />
             </div>
-            <div class="product_box">
-              <div class="product_description" id="goji_description">
-                <p><a href="" target="blank">Goji</a></p>
-                <p>Opis produkta, 
+            <div class="slide">
+              <div class="product_description">
+                <p><a href="" target="blank" id="goji_link" class="editable">Goji</a></p>
+                <p>
+                  <span class="editable" id="goji_description">
+                   Opis produkta, 
                    Opis produkta, 
                    Opis produkta,
                    Opis produkta,
                    Opis produkta,
                    Opis produkta
+                  </span>
                 </p>
-                <p>Cjena: 40kr/kg</p>
+                <span class="editable" id="goji_price">Cjena: 40kr/kg</span>
               </div>
-              <img class="product_image" class="editable" src="images/goji.jpg" />
+              <img class="product_image editable" src="images/goji.jpg" />
           </div>
-          <div class="product_box">
-            <div class="product_description" id="aronija_description">
-              <p><a href="" target="blank">Aronija</a></p>
-              <p>Opis produkta, 
+          <div class="slide">
+            <div class="product_description">
+              <p><a href="" target="blank" class="editable">Aronija</a></p>
+              <p class="editable" id="aronija_description">
+                 Opis produkta, 
                  Opis produkta, 
                  Opis produkta,
                  Opis produkta,
                  Opis produkta,
                  Opis produkta
-                </p>
-                <p>Cjena: 40kr/kg</p>
+               </p>
+               <span class="editable" id="aronija_price">Cjena: 40kr/kg</span>
             </div>
-            <img class="product_image" class="editable" src="images/aronija.jpg" />
+            <img class="product_image editable" class="editable" src="images/aronija.jpg" />
           </div>
           <div class="footer"></div>
         </div>
@@ -105,14 +110,14 @@
               <th>E-mail:</th>
             </tr>
             <tr>
-              <td>Ludagatan 11</td>
-              <td>0123 4567</td>
-              <td>info@superherbal.com</td>
+              <td> <span class="editable" id="address">Ludagatan 11</span></td>
+              <td> <span class="editable" id="telefon">0123 4567</span></td>
+              <td> <span class="editable" id="email">info@superherbal.com</span></td>
             </tr>
             <tr>
               <td></td>
               <td></td>
-              <td>elve@superherbal.com</td>
+              <td><span class="editable" id="second_email">elve@superherbal.com</span></td>
             </tr>
           </table>
         </div>
@@ -138,15 +143,13 @@
           </form>
         </div>
         <div class="footer_box" style="top:150px;left:20px;">
-          <p style="width:150px;">Nadjite nas:</p>
-          <p id="find_us_description" style="font-weight:normal; width:516px;">Mi se nalazimo kod bakine ulice tamo gdje je memetov rastoran:</p>
+          <p style="width:150px;"><span class="editable" id="find_us_header">Nadjite nas:</span></p>
+          <p style="font-weight:normal; width:516px;"><span class="editable" id="find_us_description">Mi se nalazimo kod bakine ulice tamo gdje je memetov rastoran:</span></p>
           <iframe id="map" scrolling="no" src="https://maps.google.se/maps?q=google+maps+lundagatan+11&amp;ie=UTF8&amp;hq=&amp;hnear=Lundagatan+11,+171+63+Solna&amp;gl=se&amp;t=m&amp;z=14&amp;ll=59.353993,18.001813&amp;output=embed"></iframe><br /><small><a href="https://maps.google.se/maps?q=google+maps+lundagatan+11&amp;ie=UTF8&amp;hq=&amp;hnear=Lundagatan+11,+171+63+Solna&amp;gl=se&amp;t=m&amp;z=14&amp;ll=59.353993,18.001813&amp;source=embed" style="color:#0000FF;text-align:left;">View Larger Map</a></small>
         </div>
       </div>
     </div>
     <script type="application/dart" src="index.dart"></script>
-    <script src="packages/browser/dart.js"></script>
-    <script type="application/dart" src="find_us.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </body>
 </html>

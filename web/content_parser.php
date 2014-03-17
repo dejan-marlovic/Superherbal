@@ -1,5 +1,6 @@
 <?php
-	$filename = "/home/skattjak/public_html/appfoundry.se/superherbal/test.txt";
+	//$filename = "/home/skattjak/public_html/appfoundry.se/superherbal/content.json";
+	$filename = "/var/www/superherbal/content.json";
 	$handle = fopen($filename, "r");
 	$contents = fread($handle, filesize($filename));
 	fclose($handle);
@@ -9,7 +10,6 @@
 	foreach($_POST as $key => $value)
 	{	
 		$fileArray[$key] = $value;
-		echo $value . "<br />";
 	}
 	$jsonFile = json_encode($fileArray);
 	file_put_contents($filename, $jsonFile);

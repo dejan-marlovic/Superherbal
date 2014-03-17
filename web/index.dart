@@ -1,13 +1,16 @@
 import "dart:html";
 import "admin.dart";
+import "Slider.dart";
 
 void main()
 {
+  Slider slide = new Slider(querySelector("#left_arrow_green"), querySelector("#right_arrow_green"));
   if (admin.CheckAddress())
   {
-    (querySelector("#main_window") as IFrameElement).src += "?admin";
-    UListElement nav = querySelector("#nav");
-    UpdateLinks(nav, "?admin");
+    //(querySelector("#main_window") as IFrameElement).src += "?admin";
+    admin.GenerateEditButtons("json/content.json");
+    //UListElement nav = querySelector("#nav");
+    //UpdateLinks(nav, "?admin");
   }
 }
 
